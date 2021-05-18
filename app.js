@@ -13,7 +13,7 @@ hbs.registerPartials(__dirname + '/views/parciales', function(err) {});
 //midelware, servir contenido estatico
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
     res.render('home', {
         nombre: 'Bryan suaza',
         titulo: 'Curso Nodejs'
@@ -33,10 +33,10 @@ app.get('/elements', (req, res) => {
         nombre: 'Bryan suaza',
         titulo: 'Curso Nodejs'
     })
-})
+}) */
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html')
+    res.sendFile(__dirname + '/public/index.html')
 })
 
 app.listen(port, () => {
